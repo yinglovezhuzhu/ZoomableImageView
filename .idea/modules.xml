@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ZoomableImageView.iml" filepath="$PROJECT_DIR$/ZoomableImageView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zoomableimageview_library/zoomableimageview_library.iml" filepath="$PROJECT_DIR$/zoomableimageview_library/zoomableimageview_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zoomableimageview/zoomableimageview_test.iml" filepath="$PROJECT_DIR$/zoomableimageview/zoomableimageview_test.iml" />
+    </modules>
+  </component>
+</project>
+
