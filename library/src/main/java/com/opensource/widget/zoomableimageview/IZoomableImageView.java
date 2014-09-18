@@ -145,7 +145,7 @@ public interface IZoomableImageView {
      *
      * @param listener - Listener to be registered.
      */
-    void setOnMatrixChangeListener(ZoomableImageViewAttacher.OnMatrixChangedListener listener);
+    void setOnMatrixChangeListener(ViewAttacher.OnMatrixChangedListener listener);
 
     /**
      * Register a callback to be invoked when the Photo displayed by this View is tapped with a
@@ -153,7 +153,7 @@ public interface IZoomableImageView {
      *
      * @param listener - Listener to be registered.
      */
-    void setOnPhotoTapListener(ZoomableImageViewAttacher.OnPhotoTapListener listener);
+    void setOnPhotoTapListener(ViewAttacher.OnPhotoTapListener listener);
 
     /**
      * Returns a listener to be invoked when the Photo displayed by this View is tapped with a
@@ -161,14 +161,14 @@ public interface IZoomableImageView {
      *
      * @return ZoomableImageViewAttacher.OnPhotoTapListener currently set, may be null
      */
-    ZoomableImageViewAttacher.OnPhotoTapListener getOnPhotoTapListener();
+    ViewAttacher.OnPhotoTapListener getOnPhotoTapListener();
 
     /**
      * Register a callback to be invoked when the View is tapped with a single tap.
      *
      * @param listener - Listener to be registered.
      */
-    void setOnViewTapListener(ZoomableImageViewAttacher.OnViewTapListener listener);
+    void setOnViewTapListener(ViewAttacher.OnViewTapListener listener);
 
     /**
      * Enables rotation via ZoomableImageView internal functions.
@@ -189,7 +189,7 @@ public interface IZoomableImageView {
      *
      * @return ZoomableImageViewAttacher.OnViewTapListener currently set, may be null
      */
-    ZoomableImageViewAttacher.OnViewTapListener getOnViewTapListener();
+    ViewAttacher.OnViewTapListener getOnViewTapListener();
 
     /**
      * Changes the current scale to the specified value.

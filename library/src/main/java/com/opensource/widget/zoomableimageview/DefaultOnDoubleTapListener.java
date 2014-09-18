@@ -25,18 +25,18 @@ import android.widget.ImageView;
 /**
  * Provided default implementation of GestureDetector.OnDoubleTapListener, to be overriden with custom behavior, if needed
  * <p>&nbsp;</p>
- * To be used via {@link com.opensource.widget.zoomableimageview.ZoomableImageViewAttacher#setOnDoubleTapListener(android.view.GestureDetector.OnDoubleTapListener)}
+ * To be used via {@link ViewAttacher#setOnDoubleTapListener(android.view.GestureDetector.OnDoubleTapListener)}
  */
 public class DefaultOnDoubleTapListener implements GestureDetector.OnDoubleTapListener {
 
-    private ZoomableImageViewAttacher mViewAttacher;
+    private ViewAttacher mViewAttacher;
 
     /**
      * Default constructor
      *
      * @param mViewAttacher ZoomableImageViewAttacher to bind to
      */
-    public DefaultOnDoubleTapListener(ZoomableImageViewAttacher mViewAttacher) {
+    public DefaultOnDoubleTapListener(ViewAttacher mViewAttacher) {
         setmViewAttacher(mViewAttacher);
     }
 
@@ -45,7 +45,7 @@ public class DefaultOnDoubleTapListener implements GestureDetector.OnDoubleTapLi
      *
      * @param newPhotoViewAttacher ZoomableImageViewAttacher to bind to
      */
-    public void setmViewAttacher(ZoomableImageViewAttacher newPhotoViewAttacher) {
+    public void setmViewAttacher(ViewAttacher newPhotoViewAttacher) {
         this.mViewAttacher = newPhotoViewAttacher;
     }
 

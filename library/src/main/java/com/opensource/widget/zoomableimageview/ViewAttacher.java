@@ -46,7 +46,7 @@ import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_UP;
 
-public class ZoomableImageViewAttacher implements IZoomableImageView, View.OnTouchListener,
+public class ViewAttacher implements IZoomableImageView, View.OnTouchListener,
         OnGestureListener,
         ViewTreeObserver.OnGlobalLayoutListener {
 
@@ -147,7 +147,7 @@ public class ZoomableImageViewAttacher implements IZoomableImageView, View.OnTou
     private boolean mZoomEnabled;
     private ScaleType mScaleType = ScaleType.FIT_CENTER;
 
-    public ZoomableImageViewAttacher(ImageView imageView) {
+    public ViewAttacher(ImageView imageView) {
         mImageView = new WeakReference<ImageView>(imageView);
 
         imageView.setDrawingCacheEnabled(true);

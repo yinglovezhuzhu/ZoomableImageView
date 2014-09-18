@@ -34,7 +34,7 @@ import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.opensource.widget.zoomableimageview.ZoomableImageViewAttacher;
+import com.opensource.widget.zoomableimageview.ViewAttacher;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -48,7 +48,7 @@ public class SimpleSampleActivity extends Activity {
 
     private TextView mCurrMatrixTv;
 
-    private ZoomableImageViewAttacher mAttacher;
+    private ViewAttacher mAttacher;
 
     private Toast mCurrentToast;
 
@@ -66,7 +66,7 @@ public class SimpleSampleActivity extends Activity {
         mImageView.setImageDrawable(bitmap);
 
         // The MAGIC happens here!
-        mAttacher = new ZoomableImageViewAttacher(mImageView);
+        mAttacher = new ViewAttacher(mImageView);
 
         // Lets attach some listeners, not required though!
         mAttacher.setOnMatrixChangeListener(new MatrixChangeListener());
@@ -175,7 +175,7 @@ public class SimpleSampleActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private class PhotoTapListener implements ZoomableImageViewAttacher.OnPhotoTapListener {
+    private class PhotoTapListener implements ViewAttacher.OnPhotoTapListener {
 
         @Override
         public void onPhotoTap(View view, float x, float y) {
@@ -195,7 +195,7 @@ public class SimpleSampleActivity extends Activity {
         mCurrentToast.show();
     }
 
-    private class MatrixChangeListener implements ZoomableImageViewAttacher.OnMatrixChangedListener {
+    private class MatrixChangeListener implements ViewAttacher.OnMatrixChangedListener {
 
         @Override
         public void onMatrixChanged(RectF rect) {

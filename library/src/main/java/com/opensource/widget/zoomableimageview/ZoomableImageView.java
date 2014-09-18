@@ -29,7 +29,7 @@ import android.widget.ImageView;
 
 public class ZoomableImageView extends ImageView implements IZoomableImageView {
 
-    private final ZoomableImageViewAttacher mViewAttacher;
+    private final ViewAttacher mViewAttacher;
 
     private ScaleType mPendingScaleType;
 
@@ -44,7 +44,7 @@ public class ZoomableImageView extends ImageView implements IZoomableImageView {
     public ZoomableImageView(Context context, AttributeSet attr, int defStyle) {
         super(context, attr, defStyle);
         super.setScaleType(ScaleType.MATRIX);
-        mViewAttacher = new ZoomableImageViewAttacher(this);
+        mViewAttacher = new ViewAttacher(this);
 
         if (null != mPendingScaleType) {
             setScaleType(mPendingScaleType);
@@ -161,7 +161,7 @@ public class ZoomableImageView extends ImageView implements IZoomableImageView {
     }
 
     @Override
-    public void setOnMatrixChangeListener(ZoomableImageViewAttacher.OnMatrixChangedListener listener) {
+    public void setOnMatrixChangeListener(ViewAttacher.OnMatrixChangedListener listener) {
         mViewAttacher.setOnMatrixChangeListener(listener);
     }
 
@@ -171,22 +171,22 @@ public class ZoomableImageView extends ImageView implements IZoomableImageView {
     }
 
     @Override
-    public void setOnPhotoTapListener(ZoomableImageViewAttacher.OnPhotoTapListener listener) {
+    public void setOnPhotoTapListener(ViewAttacher.OnPhotoTapListener listener) {
         mViewAttacher.setOnPhotoTapListener(listener);
     }
 
     @Override
-    public ZoomableImageViewAttacher.OnPhotoTapListener getOnPhotoTapListener() {
+    public ViewAttacher.OnPhotoTapListener getOnPhotoTapListener() {
         return mViewAttacher.getOnPhotoTapListener();
     }
 
     @Override
-    public void setOnViewTapListener(ZoomableImageViewAttacher.OnViewTapListener listener) {
+    public void setOnViewTapListener(ViewAttacher.OnViewTapListener listener) {
         mViewAttacher.setOnViewTapListener(listener);
     }
 
     @Override
-    public ZoomableImageViewAttacher.OnViewTapListener getOnViewTapListener() {
+    public ViewAttacher.OnViewTapListener getOnViewTapListener() {
         return mViewAttacher.getOnViewTapListener();
     }
 
