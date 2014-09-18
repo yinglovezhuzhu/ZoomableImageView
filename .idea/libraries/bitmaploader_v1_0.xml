@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="bitmaploader_v1.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/zoomableimageview_test/libs/bitmaploader_v1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/demo/libs/bitmaploader_v1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

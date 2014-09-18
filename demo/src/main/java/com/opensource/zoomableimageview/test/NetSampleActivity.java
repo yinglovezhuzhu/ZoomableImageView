@@ -40,7 +40,7 @@ public class NetSampleActivity extends Activity {
 
         initImageFetcher();
 
-        mImageFetcher.loadImage("http://www.ii123.com/uploads/allimg/c121123/1353A261D0460-410C.jpg", photoView);
+        mImageFetcher.loadImage("http://pic1.nipic.com/2008-11-05/200811595452584_2.jpg", photoView);
     }
 
     private void initImageFetcher() {

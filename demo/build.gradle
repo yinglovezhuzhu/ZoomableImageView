@@ -1,8 +1,8 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.3'
+    buildToolsVersion '19.1.0'
 
     defaultConfig {
         minSdkVersion 8
@@ -20,6 +20,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':zoomableimageview_library')
+    compile project(':library')
     compile 'com.android.support:appcompat-v7:19.+'
 }

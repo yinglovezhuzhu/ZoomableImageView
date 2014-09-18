@@ -1,1 +1,1 @@
-include ':zoomableimageview_library', ':zoomableimageview_test'
+include ':demo', ':library'

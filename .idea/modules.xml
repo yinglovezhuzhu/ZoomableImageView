@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZoomableImageView.iml" filepath="$PROJECT_DIR$/ZoomableImageView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zoomableimageview_library/zoomableimageview_library.iml" filepath="$PROJECT_DIR$/zoomableimageview_library/zoomableimageview_library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zoomableimageview/zoomableimageview_test.iml" filepath="$PROJECT_DIR$/zoomableimageview/zoomableimageview_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>
