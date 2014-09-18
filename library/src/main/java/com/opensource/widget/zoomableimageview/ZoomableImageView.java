@@ -244,4 +244,10 @@ public class ZoomableImageView extends ImageView implements IZoomableImageView {
         mViewAttacher.cleanup();
         super.onDetachedFromWindow();
     }
+
+    public void cleanup() {
+        if(null != mViewAttacher) {
+            mViewAttacher.cleanup();
+        }
+    }
 }

@@ -29,12 +29,12 @@ import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.opensource.widget.zoomableimageview.ViewAttacher;
+import com.opensource.widget.zoomableimageview.ZoomableImageView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -48,7 +48,9 @@ public class SimpleSampleActivity extends Activity {
 
     private TextView mCurrMatrixTv;
 
-    private ViewAttacher mAttacher;
+    private ZoomableImageView mImageView;
+
+//    private ViewAttacher mAttacher;
 
     private Toast mCurrentToast;
 
@@ -59,18 +61,22 @@ public class SimpleSampleActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple);
 
-        ImageView mImageView = (ImageView) findViewById(R.id.iv_photo);
+//        ImageView mImageView = (ImageView) findViewById(R.id.iv_photo);
+        mImageView = (ZoomableImageView) findViewById(R.id.iv_photo);
+
         mCurrMatrixTv = (TextView) findViewById(R.id.tv_current_matrix);
 
         Drawable bitmap = getResources().getDrawable(R.drawable.wallpaper);
         mImageView.setImageDrawable(bitmap);
 
-        // The MAGIC happens here!
-        mAttacher = new ViewAttacher(mImageView);
-
-        // Lets attach some listeners, not required though!
-        mAttacher.setOnMatrixChangeListener(new MatrixChangeListener());
-        mAttacher.setOnPhotoTapListener(new PhotoTapListener());
+//        // The MAGIC happens here!
+//        mAttacher = new ViewAttacher(mImageView);
+//
+//        // Lets attach some listeners, not required though!
+//        mAttacher.setOnMatrixChangeListener(new MatrixChangeListener());
+//        mAttacher.setOnPhotoTapListener(new PhotoTapListener());
+        mImageView.setOnMatrixChangeListener(new MatrixChangeListener());
+        mImageView.setOnPhotoTapListener(new PhotoTapListener());
     }
 
     @Override
@@ -84,14 +90,17 @@ public class SimpleSampleActivity extends Activity {
         super.onDestroy();
 
         // Need to call clean-up
-        mAttacher.cleanup();
+//        mAttacher.cleanup();
+        mImageView.cleanup();
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem zoomToggle = menu.findItem(R.id.menu_zoom_toggle);
         assert null != zoomToggle;
-        zoomToggle.setTitle(mAttacher.canZoom() ? R.string.menu_zoom_disable : R.string.menu_zoom_enable);
+//        zoomToggle.setTitle(mAttacher.canZoom() ? R.string.menu_zoom_disable : R.string.menu_zoom_enable);
+
+        zoomToggle.setTitle(mImageView.canZoom() ? R.string.menu_zoom_disable : R.string.menu_zoom_enable);
 
         return super.onPrepareOptionsMenu(menu);
     }
@@ -100,45 +109,58 @@ public class SimpleSampleActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_zoom_toggle:
-                mAttacher.setZoomable(!mAttacher.canZoom());
+//                mAttacher.setZoomable(!mAttacher.canZoom());
+                mImageView.setZoomable(!mImageView.canZoom());
                 return true;
 
             case R.id.menu_scale_fit_center:
-                mAttacher.setScaleType(ScaleType.FIT_CENTER);
+                mImageView.setScaleType(ScaleType.FIT_CENTER);
+//                mAttacher.setScaleType(ScaleType.FIT_CENTER);
                 return true;
 
             case R.id.menu_scale_fit_start:
-                mAttacher.setScaleType(ScaleType.FIT_START);
+//                mAttacher.setScaleType(ScaleType.FIT_START);
+                mImageView.setScaleType(ScaleType.FIT_START);
                 return true;
 
             case R.id.menu_scale_fit_end:
-                mAttacher.setScaleType(ScaleType.FIT_END);
+//                mAttacher.setScaleType(ScaleType.FIT_END);
+                mImageView.setScaleType(ScaleType.FIT_END);
                 return true;
 
             case R.id.menu_scale_fit_xy:
-                mAttacher.setScaleType(ScaleType.FIT_XY);
+//                mAttacher.setScaleType(ScaleType.FIT_XY);
+                mImageView.setScaleType(ScaleType.FIT_XY);
                 return true;
 
             case R.id.menu_scale_scale_center:
-                mAttacher.setScaleType(ScaleType.CENTER);
+//                mAttacher.setScaleType(ScaleType.CENTER);
+                mImageView.setScaleType(ScaleType.CENTER);
                 return true;
 
             case R.id.menu_scale_scale_center_crop:
-                mAttacher.setScaleType(ScaleType.CENTER_CROP);
+//                mAttacher.setScaleType(ScaleType.CENTER_CROP);
+                mImageView.setScaleType(ScaleType.CENTER_CROP);
                 return true;
 
             case R.id.menu_scale_scale_center_inside:
-                mAttacher.setScaleType(ScaleType.CENTER_INSIDE);
+//                mAttacher.setScaleType(ScaleType.CENTER_INSIDE);
+                mImageView.setScaleType(ScaleType.CENTER_INSIDE);
                 return true;
 
             case R.id.menu_scale_random_animate:
             case R.id.menu_scale_random:
                 Random r = new Random();
 
-                float minScale = mAttacher.getMinimumScale();
-                float maxScale = mAttacher.getMaximumScale();
+//                float minScale = mAttacher.getMinimumScale();
+//                float maxScale = mAttacher.getMaximumScale();
+//                float randomScale = minScale + (r.nextFloat() * (maxScale - minScale));
+//                mAttacher.setScale(randomScale, item.getItemId() == R.id.menu_scale_random_animate);
+
+                float minScale = mImageView.getMinimumScale();
+                float maxScale = mImageView.getMaximumScale();
                 float randomScale = minScale + (r.nextFloat() * (maxScale - minScale));
-                mAttacher.setScale(randomScale, item.getItemId() == R.id.menu_scale_random_animate);
+                mImageView.setScale(randomScale, item.getItemId() == R.id.menu_scale_random_animate);
 
                 showToast(String.format(SCALE_TOAST_STRING, randomScale));
 
@@ -147,14 +169,18 @@ public class SimpleSampleActivity extends Activity {
                 if (mCurrentDisplayMatrix == null)
                     showToast("You need to capture display matrix first");
                 else
-                    mAttacher.setDisplayMatrix(mCurrentDisplayMatrix);
+                    mImageView.setDisplayMatrix(mCurrentDisplayMatrix);
+
+//                    mAttacher.setDisplayMatrix(mCurrentDisplayMatrix);
                 return true;
             case R.id.menu_matrix_capture:
-                mCurrentDisplayMatrix = mAttacher.getDisplayMatrix();
+//                mCurrentDisplayMatrix = mAttacher.getDisplayMatrix();
+                mCurrentDisplayMatrix = mImageView.getDisplayMatrix();
                 return true;
             case R.id.extract_visible_bitmap:
                 try {
-                    Bitmap bmp = mAttacher.getVisibleRectangleBitmap();
+//                    Bitmap bmp = mAttacher.getVisibleRectangleBitmap();
+                    Bitmap bmp = mImageView.getVisibleRectangleBitmap();
                     File tmpFile = File.createTempFile("photoview", ".png",
                             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS));
                     FileOutputStream out = new FileOutputStream(tmpFile);
