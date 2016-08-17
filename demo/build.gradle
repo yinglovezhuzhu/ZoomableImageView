@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.opensource.zoomableimageview"
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':zoomableImageView')
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/Bitmaploader_v1.0_build201501211641.jar')
+}

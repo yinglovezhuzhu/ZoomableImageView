@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\AndroidStudioProjects\ZoomableImageView\demo\build\intermediates\exploded-aar\ZoomableImageView\zoomableImageView\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="87175adcf2c9bbfb3e3606e250a1c36a34c6a83a">
+        <dex dex="E:\AndroidStudioProjects\ZoomableImageView\demo\build\intermediates\pre-dexed\debug\ZoomableImageView-zoomableImageView-unspecified_da7a6feb99a91d1b69dd7a1186b6cea860f758f8.jar" />
+    </item>
+    <item
+        jar="E:\AndroidStudioProjects\ZoomableImageView\demo\libs\Bitmaploader_v1.0_build201501211641.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="46b10ccdf1b4907914c1524ecc311c520d17bd05">
+        <dex dex="E:\AndroidStudioProjects\ZoomableImageView\demo\build\intermediates\pre-dexed\debug\Bitmaploader_v1.0_build201501211641_3af3ea1fcb6ca4b71c9acc1b51161b1f44f1cd6c.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="E:\AndroidStudioProjects\ZoomableImageView\demo\build\intermediates\pre-dexed\debug\support-v4-19.1.0_73b9883bfda7e9a6ae205d0e99c174e73ba72aaa.jar" />
+    </item>
+
+</items>

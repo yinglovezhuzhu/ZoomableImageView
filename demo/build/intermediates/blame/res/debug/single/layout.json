@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_simple.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\layout\\activity_simple.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_net_simple.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\layout\\activity_net_simple.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_view_pager.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\layout\\activity_view_pager.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_net_simple.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\layout\\activity_net_simple.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_view_pager.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\layout\\activity_view_pager.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_simple.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\layout\\activity_simple.xml"
+    }
+]

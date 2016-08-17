@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\menu\\viewpager_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\menu\\viewpager_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\menu\\viewpager_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\menu\\viewpager_menu.xml"
+    }
+]

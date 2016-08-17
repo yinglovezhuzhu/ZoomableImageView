@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\wallpaper.jpg",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\drawable-nodpi\\wallpaper.jpg"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\empty_photo.9.png",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\drawable-nodpi\\empty_photo.9.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\empty_photo.9.png",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\zoomableImageView_Demo\\src\\main\\res\\drawable-nodpi\\empty_photo.9.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\wallpaper.jpg",
+        "source": "E:\\AndroidStudioProjects\\ZoomableImageView\\demo\\src\\main\\res\\drawable-nodpi\\wallpaper.jpg"
+    }
+]
