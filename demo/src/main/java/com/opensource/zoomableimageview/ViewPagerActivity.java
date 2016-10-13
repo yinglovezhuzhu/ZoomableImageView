@@ -29,7 +29,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 
 import com.opensource.widget.ZoomableImageView;
-import com.opensource.zoomableimageview.widget.LockableViewPager;
+import com.opensource.widget.LockableViewPager;
 
 /**
  * Lock/Unlock button is added to the ActionBar.
@@ -49,7 +49,7 @@ public class ViewPagerActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
-        mViewPager = (LockableViewPager) findViewById(R.id.view_pager);
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
 		setContentView(mViewPager);
 
 		mViewPager.setAdapter(new SamplePagerAdapter());
@@ -120,7 +120,7 @@ public class ViewPagerActivity extends Activity {
     		((LockableViewPager) mViewPager).toggleLock();
     	}
     }
-    
+
     private void toggleLockBtnTitle() {
     	boolean isLocked = false;
     	if (isViewPagerActive()) {
@@ -135,7 +135,7 @@ public class ViewPagerActivity extends Activity {
     private boolean isViewPagerActive() {
     	return (mViewPager != null && mViewPager instanceof LockableViewPager);
     }
-    
+
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		if (isViewPagerActive()) {
