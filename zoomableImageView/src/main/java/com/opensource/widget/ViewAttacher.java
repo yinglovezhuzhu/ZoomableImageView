@@ -263,15 +263,6 @@ public class ViewAttacher implements IZoomableImageView, View.OnTouchListener,
         return true;
     }
 
-    /**
-     * @deprecated use {@link #setRotationTo(float)}
-     */
-    @Override
-    public void setPhotoViewRotation(float degrees) {
-        mSuppMatrix.setRotate(degrees % 360);
-        checkAndDisplayMatrix();
-    }
-
     @Override
     public void setRotationTo(float degrees) {
         mSuppMatrix.setRotate(degrees % 360);
